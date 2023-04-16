@@ -8,7 +8,6 @@ import morgan from 'morgan'
 import passport from 'passport'
 import session from 'express-session'
 //import exphbs from 'express-handlebars'
-import mongoose from 'mongoose'
 import mongoStore from 'connect-mongo';
 //let mongoStore = connectMongo.default;
 
@@ -32,7 +31,7 @@ import bodyParser from 'body-parser';
 
 //async function main(){
     const app = express()
-    const port = 8080;
+    const port = process.env.PORT || 3000;
     const __dirname = dirname(fileURLToPath(import.meta.url));
 
     //logging morgan
